@@ -56,7 +56,7 @@ strokeLinejoin="round"
  
 export default function HowItWorks() {
 return (
-<section className="my-[50px]">
+<section className="my-[50px] bg-[#ffffff] py-[70px]">
 <div className="flex flex-col items-center">
 <p className="font-[700] text-[34px] text-[#242629]">How it Works</p>
 <div className="w-[100px] h-[8px] bg-[#1D4ED8] rounded-[8px]"></div>
