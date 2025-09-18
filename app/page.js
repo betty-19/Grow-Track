@@ -10,11 +10,23 @@ export default function Home() {
   return (
     <>
 
-     
-      <Features />
-      <HowItWorks/>   
-      <Testimonials />
-      <Footer/>
+     <section id="features">
+        <Features />
+      </section>
+
+      <section id="how-it-works">
+        <HowItWorks />
+      </section>
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      {/* <section id="contact">
+        <ContactUs />
+      </section> */}
+
+      <Footer />
+
 
     </>
   );
