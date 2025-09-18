@@ -10,21 +10,21 @@ const Testimonials = () => {
       text: "I used to miss workouts all the time. Now GrowTrack keeps me accountable — I haven't skipped a day in 3 weeks.",
       author: "Alex Jonathan",
       role: "Fitness Enthusiast",
-      avatar: "/avatar-image-alex.png"
+      picture: "/mitchellee.jpg"
     },
     {
       id: 2,
       text: "Balancing classes and work was overwhelming. The reminders keep me consistent, and I finally built a study routine that sticks.",
       author: "David Hart",
       role: "Student",
-      avatar: "/image-avatar-student.png"
+      picture: "/Beti.JPG"
     },
     {
       id: 3,
       text: "I started small — just writing 10 minutes a day. Now, it’s a habit I don’t even think about missing",
       author: "Anne Noah",
       role: "Writer",
-      avatar: "/avatar-image-writer.png"
+      picture: "/S_photo.jpg"
     }
     
   ];
@@ -103,7 +103,7 @@ const Testimonials = () => {
                 <div className="absolute bottom-1/4 right-0 transform translate-x-1/2 translate-y-1/2">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden border-2 border-white shadow-md">
                     <img 
-                      src="/avatar-image-2.png" 
+                      src="/beti.JPG" 
                       alt="User avatar 3" 
                       className="w-full h-full object-cover rounded-full"
                     />
@@ -114,7 +114,7 @@ const Testimonials = () => {
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden border-2 border-white shadow-md">
                     <img 
-                      src="/avatar-image-3.png" 
+                      src="/S_photo.jpg" 
                       alt="User avatar 3" 
                       className="w-full h-full object-cover rounded-full"
                       id="avatar-image-3"
@@ -203,7 +203,7 @@ const Testimonials = () => {
                 <div className="flex items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 mr-4">
                     <img 
-                      src={currentTestimonial.avatar} 
+                      src={currentTestimonial.picture} 
                       alt={currentTestimonial.author} 
                       className="w-full h-full object-cover rounded-full"
                     />
