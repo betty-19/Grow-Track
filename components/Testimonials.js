@@ -18,13 +18,15 @@ const Testimonials = () => {
       role: "Student",
       picture: "/beti.JPG"
     },
-    {
-      id: 3,
-      text: "I started small — just writing 10 minutes a day. Now, it’s a habit I don’t even think about missing",
-      author: "Mitchelle M",
-      role: "Writer",
-      picture: "/mitchellee.jpg"
-    }
+
+   {
+  id: 3,
+  text: "I started small — just writing 10 minutes a day. Now, it&#39;s a habit I don&#39;t even think about missing",
+  author: "Anne Noah",
+  role: "Writer",
+  picture: "/S_photo.jpg"
+}
+
     
   ];
 

@@ -4,8 +4,26 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Footer() {
   const [isSubscribe, setIsSubscribe] = useState(false);
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSubscribeBtn = () => setIsSubscribe(true);
+  const handleSubscribeBtn = () => {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!email)
+    {
+      setError("Please Enter your Email");
+    }
+    else if(!emailRegex.test(email))
+      {
+        setError("Please enter a valid email address.");
+      setIsSubscribe(false);
+      }
+      else{
+        setIsSubscribe(true);
+      setError("");
+      }
+  }
 
   return (
     <>
@@ -16,54 +34,19 @@ export default function Footer() {
           gap-10 py-20 px-6
           md:grid md:grid-cols-2 md:text-left 
           lg:flex lg:flex-row lg:justify-around lg:items-start
+          mt-[50px]
         "
       >
       
         <div>
           <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-            <img src="../images/logo.png" alt="" className="w-10 h-10" />
+            <img src="../logo.png" alt="" className="w-10 h-10" />
             <p className="text-[20px] font-[700] text-[#242629]">GrowTrack</p>
           </div>
           <p className="font-[500] text-[20px] text-[#242629]">
             Helping you build <br /> habits that last
           </p>
         </div>
-
-      
-        {/* <div>
-          <p className="text-[#242629] text-[20px] font-[700] mb-[10px]">
-            Links
-          </p>
-          <div className="flex flex-col gap-[10px] font-[500] text-[14px] text-[#242629]">
-            <p>Features</p>
-            <p>How It Works</p>
-            <p>Testimonials</p>
-            <p>Contact Us</p>
-          </div>
-        </div>   
-        <div>
-          <p className="text-[#242629] text-[20px] font-[700] mb-[10px]">
-            Socials
-          </p>
-          <div className="flex flex-col gap-[10px] font-[500] text-[14px] text-[#242629]">
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>LinkedIn</p>
-            <p>Twitter(X)</p>
-          </div>
-        </div>
-
-   
-        <div>
-          <p className="text-[#242629] text-[20px] font-[700] mb-[10px]">
-            Legal
-          </p>
-          <div className="flex flex-col gap-[10px] font-[500] text-[14px] text-[#242629]">
-            <p>Privacy Policy</p>
-            <p>How It Works</p>
-            <p>Terms of Service</p>
-          </div>
-        </div> */}
 
        {[
           { title: "Links", items: ["Features", "How It Works", "Testimonials", "Contact Us"] },
@@ -92,12 +75,15 @@ export default function Footer() {
   <input
     type="email"
     placeholder="Enter your email address here"
+    id="email"
+    onChange={(e)=> setEmail(e.target.value)}
     className="
       flex-1 text-sm sm:text-[12px] font-[400] text-[#242629] 
       placeholder:text-[#242629] 
       focus:outline-none 
       pr-2   
     "
+    required
   />
   <button
     className="
@@ -113,11 +99,12 @@ export default function Footer() {
   </button>
 </div>
 
-          {isSubscribe && (
+          {isSubscribe && !error &&(
             <p className="font-[400] text-[16px] text-[#242629] sm:text-[18px] md:text-[20px] ">
               You're in! Thanks for subscribing
             </p>
           )}
+        {error && <p className="text-red-500 text-sm">{error}</p>}
         </div>
       </section>
 
