@@ -34,6 +34,7 @@ export default function Footer() {
           gap-10 py-20 px-6
           md:grid md:grid-cols-2 md:text-left 
           lg:flex lg:flex-row lg:justify-around lg:items-start
+          mt-[50px]
         "
       >
       

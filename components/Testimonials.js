@@ -7,7 +7,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      text: "I used to miss workouts all the time. Now GrowTrack keeps me accountable — I haven't skipped a day in 3 weeks.",
+      text: "I used to miss workouts all the time. Now GrowTrack keeps me accountable — I haven&apos;tt skipped a day in 3 weeks.",
       author: "Alex Jonathan",
       role: "Fitness Enthusiast",
       picture: "/mitchellee.jpg"
@@ -21,7 +21,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      text: "I started small — just writing 10 minutes a day. Now, it’s a habit I don’t even think about missing",
+      text: "I started small — just writing 10 minutes a day. Now, it&apos;s a habit I don&apos;t even think about missing",
       author: "Anne Noah",
       role: "Writer",
       picture: "/S_photo.jpg"
