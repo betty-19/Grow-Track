@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Footer() {
   const [isSubscribe, setIsSubscribe] = useState(false);
+
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
 
@@ -75,8 +76,10 @@ export default function Footer() {
           </p>
         </div>
 
+
         {/* Footer Link Groups */}
         {linkGroups.map((group) => (
+
           <div key={group.title}>
             <p className="text-[#242629] text-[20px] font-[700] mb-[10px]">
               {group.title}
@@ -120,6 +123,7 @@ export default function Footer() {
           <p className="font-[700] text-[20px] text-[#242629]">
             Subscribe to our News
           </p>
+
           <div
             className="
               border border-[#153799] rounded-[20px]
@@ -161,6 +165,7 @@ export default function Footer() {
             </p>
           )}
           {error && <p className="text-red-500 text-sm">{error}</p>}
+
         </div>
       </section>
 

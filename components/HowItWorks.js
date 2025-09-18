@@ -32,6 +32,7 @@ export default function HowItWorks() {
       {/* --- large-screen '1' (keeps your original row placement) --- */}
       <p className="big-number hide-on-mobile font-[700] text-[64px] text-[#B9C8F3]">1</p>
  
+
       <div className="flex flex-col lg:flex-row items-center justify-around">
  
         {/* -------- STEP 1 -------- */}
@@ -157,6 +158,7 @@ export default function HowItWorks() {
       margin-bottom: 8rem; /* space between title and first step */
     }
   }
+
 
   /* mid-range scaling: 1020px - 1150px */
   @media (min-width: 1020px) and (max-width: 1150px) {
